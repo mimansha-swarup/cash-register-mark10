@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background: url("https://cdn.pixabay.com/photo/2014/12/21/23/51/cash-register-576181_960_720.png") center no-repeat fixed;
+    background-size: contain;
+    background-color: #0B7540;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
+    height: fit-content;
+    min-height: 100vh;
+    color: #fafafa;
+    font-size: 1rem;
+}
+
+.glass-cont {
+    padding: 3rem 1.5rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    max-width: 600px;
+    background-color: rgba(35, 99, 67, 0.7);
+    border-radius: 0 0 .7rem .7rem;
+    border: 1px solid rgba(125, 212, 168, .7);
+    border-top: none;
+    backdrop-filter: blur(10px);
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 16px;
+    letter-spacing: .05rem;
+    margin: 1.5rem 0;
+    word-wrap: break-word;
+    font-weight: 300;
+}
+
+label {
+    font-weight: 600;
+    margin: .5rem 0;
+    display: block;
+    font-size: 1.3rem;
+    color: #EEFCF3;
+}
+
+input {
+    border-radius: .7rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    margin: .7rem 0;
+    background-color: #DEF7E8;
+    font-size: 1rem;
+}
+
+input:focus {
+    border: 1px solid #0EFB69;
+    outline: none;
+}
+
+button {
+    padding: .7rem 0;
+    margin: 2rem 5rem;
+    border-radius: .5rem;
+    border: 1px solid #023C18;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #023C18;
+    background-color: #A7F3D0;
+}
+
+.hidden-cont {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    /* align-items: center; */
+}
+
+#error-msg {
+    font-size: 1.3rem;
+    color: #B4161B;
+    border-left: 10px solid #B4161B;
+    text-align: left;
+    padding: .5rem 1rem;
+    background-color: #C9CECF;
+    display: none;
+}
+
+#cash-table {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-collapse: collapse;
+    /* border: 2px solid #023C18; */
+    padding: 0.2rem
+}
+
+#cash-table tbody {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#cash-table th,
+td {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    border-collapse: collapse;
+    border: 2px solid #023C18;
+    padding: 1rem;
+    justify-content: center;
+    background-color: #0B7540;
+}
+
+#cash-table caption {
+    font-size: 1.3rem;
+    margin: 1.7rem 0;
+    font-weight: 500;
+}
+
+.no-of-notes {
+    background-color: white;
+    font-weight: bold;
+    color: #0B7540;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+th,
+td {
+    word-wrap: break-word;
+}
