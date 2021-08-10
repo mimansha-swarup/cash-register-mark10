@@ -23,16 +23,19 @@ nextBtn.addEventListener('click', () => {
 checkBtn.addEventListener('click', () => {
     HideError();
     if (Number(cashAmt.value) > 0) {
-        if (cashAmt.value >= billAmt.value) {
-            const amountToBeReturned = cashAmt.value - billAmt.value;
+        // console.log(`${cashAmt.value} >= ${billAmt.value} is ${Number(cashAmt.value) >= Number(billAmt.value)}`)
+        if (Number(cashAmt.value) >= Number(billAmt.value)) {
+            const amountToBeReturned = Number(cashAmt.value) - Number(billAmt.value);
             CalculateReturnMoney(amountToBeReturned);
             cashTable.style.display = "flex";
         } else {
             ShowError("Kitchen is that side!!")
+            cashTable.style.display = "none";
         }
 
     } else {
         ShowError("The cash provided should atleast be equal to the bill amount");
+        cashTable.style.display = "none";
     }
 
 });
@@ -41,6 +44,7 @@ function CalculateReturnMoney(amountToBeReturned) {
     for (let i = 0; i < availNotes.length; i++) {
         const numberOfNote = Math.trunc(amountToBeReturned / availNotes[i]);
         amountToBeReturned = amountToBeReturned - numberOfNote * availNotes[i];
+        // amountToBeReturned /= availNotes[i];
         noOfNotes[i].innerText = numberOfNote;
 
     }
