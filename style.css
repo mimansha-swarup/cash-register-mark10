@@ -3,16 +3,18 @@ body {
     margin: 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    background: url("https://cdn.pixabay.com/photo/2014/12/21/23/51/cash-register-576181_960_720.png") center no-repeat fixed;
+    background: url("https://cdn.pixabay.com/photo/2014/12/21/23/51/cash-register-576181_960_720.png");
+    background-attachment: fixed;
     background-size: contain;
     background-color: #0B7540;
     align-items: center;
     width: 100%;
     /* height: 100vh; */
-    height: fit-content;
+    /* height: fit-content; */
     min-height: 100vh;
-    color: #fafafa;
-    font-size: 1rem;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .glass-cont {
