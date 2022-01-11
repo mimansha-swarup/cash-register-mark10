@@ -40,7 +40,7 @@ checkBtn.addEventListener('click', () => {
 
 });
 
-function CalculateReturnMoney(amountToBeReturned) {
+const CalculateReturnMoney = amountToBeReturned => {
     for (let i = 0; i < availNotes.length; i++) {
         const numberOfNote = Math.trunc(amountToBeReturned / availNotes[i]);
         amountToBeReturned = amountToBeReturned - numberOfNote * availNotes[i];
@@ -51,12 +51,10 @@ function CalculateReturnMoney(amountToBeReturned) {
 
 }
 
-function ShowError(msg) {
+const ShowError = msg => {
     errorMsgTxt.style.display = "block"
     errorMsgTxt.innerText = msg
 }
 
-function HideError() {
-    errorMsgTxt.style.display = "none"
+const HideError = () => errorMsgTxt.style.display = "none"
 
-}
